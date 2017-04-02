@@ -35,33 +35,39 @@ of those sections to manage the look and feel of the site. */
     height: 70%;
     padding-top: 150px;
     text-align: center;
-    background: #fff;
+    background: #000;
+    color: #fff;
 }
 
 .about-section {
-    height: 100%;
-    padding-top: 150px;
+    height: 70%;
+    padding-top: 90px;
     text-align: center;
     background: #eee;
 }
 
 .services-section {
-    height: 100%;
-    padding-top: 150px;
+    height: 120%;
+    padding-top: 30px;
     text-align: center;
     background: #fff;
 }
 
 .contact-section {
-    height: 100%;
-    padding-top: 150px;
+    height: 50%;
+    padding-top: 90px;
     text-align: center;
     background: #eee;
 }
 
 .col-md-6 {
-  height: 216px;
-  text-align: -webkit-right;
+  /*height: 216px;*/
+  /*text-align: -webkit-right;*/
+  /*margin-top: 50px;*/
+}
+
+.portfolio {
+  width: 70%;
 }
 
 #profile-picture {
