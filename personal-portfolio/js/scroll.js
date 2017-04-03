@@ -17,3 +17,9 @@ $(function() {
         event.preventDefault();
     });
 });
+// Add and remove active class on nav bar links
+$(function() {
+  $('li').on('click', function() {
+    $(this).addClass('active').siblings().removeClass('active');
+  });
+});

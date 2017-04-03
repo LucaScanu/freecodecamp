@@ -47,7 +47,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .services-section {
-    height: 120%;
+    height: 160%;
     padding-top: 30px;
     text-align: center;
     background: #fff;
@@ -66,9 +66,28 @@ of those sections to manage the look and feel of the site. */
   /*margin-top: 50px;*/
 }
 
-.portfolio {
-  width: 70%;
+img.portfolio {
+  margin-left: 5px;
+  margin-right: 5px;
 }
+
+.about-section {
+  background-image: url("https://static.pexels.com/photos/287/apple-iphone-desk-laptop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+.active {
+  background-color: red;
+}
+/*a.page-scroll:active {
+  background: red;
+}*/
+/*.navbar-default .navbar-nav>li>a {
+    background-color: red;
+}*/
 
 #profile-picture {
   width: 70%;
