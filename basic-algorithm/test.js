@@ -47,3 +47,50 @@ function findLongestWord(str) {
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog");
+
+// ### num 5  - Title case a sentence
+
+function capitalize(str) {
+  var array = str.split(' ').toLowerCase();
+  var newArray = [];
+  for (var i = 0; i < array.length; i++) {
+    newArray.push(array[i].charAt(0).toUpperCase() + arra[i].slice(1));
+  }
+
+}
+
+function titleCase(str) {
+  var array = str.toLowerCase().split(' ');
+  var newarray1 = [];
+
+  for(var i = 0; i < array.length; i++){
+      newarray1.push(array[i].charAt(0).toUpperCase() + array[i].slice(1));
+  }
+  return newarray1.join(' ');
+}
+
+// ### num 6  - Return largest number in array
+
+function largestOfFour(arr) {
+  var newArray = [];
+  for (var i = 0; i < arr.length; i++) {
+    var largest = 0;
+    for (var j = 0; j < arr[i].length; j++) {
+      if(arr[i][j] > largest) {
+      largest = arr[i][j];
+    }
+  }
+    newArray.push(largest);
+}
+  return newArray;
+}
+
+// ### num 7  - confirm the ending
+
+function confirmEnding() {
+  var newString = str.substr(-target.length);
+  if(newString === target) {
+    return true;
+  }
+  return false;
+}
