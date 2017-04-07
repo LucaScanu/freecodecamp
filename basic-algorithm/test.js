@@ -94,3 +94,56 @@ function confirmEnding() {
   }
   return false;
 }
+
+// ### num 8  - repeat a string
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  var newString = "";
+  var emptyString = "";
+  if(num > 0) {
+    for(var i = 0; i < num; i++){
+      newString += str;
+    }
+    return newString;
+  }
+  return emptyString;
+}
+
+repeatStringNumTimes("abc", -2);
+
+// ### num 9
+
+function truncateString(str, num) {
+  var truncated = "";
+  if(str.length > num && num > 3) {
+    truncated = str.slice(0, num-3) + "...";
+    return truncated;
+  } else if(str.length > num && num <= 3) {
+    truncated = str.slice(0, num) + "...";
+    return truncated;
+  }
+  return str;
+}
+
+truncateString("Absolutely Longer", 2);
+
+
+// ## num 10
+
+function monkey(arr, num) {
+  var tempArray = [];
+  var finalArray = [];
+
+  for(var i = 0; i < arr.length; i++) {
+    if(i % num != num -1) {
+      tempArray.push(arr[i]);
+    }else {
+      tempArray.push(arr[i]);
+      finalArray.push(tempArray);
+      tempArray = [];
+    }
+  }
+  if(tempArray.length !== 0)
+    finalArray.push(tempArray);
+    return finalArray;
+}
