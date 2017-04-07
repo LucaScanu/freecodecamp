@@ -35,15 +35,15 @@ palindrome(eye);
 
 function findLongestWord(str) {
   var array = str.split(" ");
-  var longestWord = 0;
+  var longest = 0;
   var longestString = "";
   for(var i = 0; i < array.length; i++) {
-    if(array[i].length > longestWord && typeof array[i] == "string") {
-      longestWord = array[i].length;
-      longestString = array[i];
+    if(array[i].length > longest && typeof array[i] == "string") {
+      longest = array[i].length;
+      longestString = longest;
     }
   }
-  return longestString.length;
+  return longestString;
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog");
