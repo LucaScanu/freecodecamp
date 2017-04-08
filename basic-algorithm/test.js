@@ -87,8 +87,10 @@ function largestOfFour(arr) {
 
 // ### num 7  - confirm the ending
 
-function confirmEnding() {
+function confirmEnding(str, target) {
+  // I created a variable to store the newly created string. I have used str.substr() to extract the string components starting from the str.length till the end of the string.
   var newString = str.substr(-target.length);
+  //  if the extracted new string is equal to given target then return true otherwise return false.
   if(newString === target) {
     return true;
   }
@@ -97,31 +99,38 @@ function confirmEnding() {
 
 // ### num 8  - repeat a string
 function repeatStringNumTimes(str, num) {
-  // repeat after me
+  // I created two var strings. One to store the new string and one to return if the solution is an empty string.
   var newString = "";
   var emptyString = "";
+  // if the second argument is a positive number I use a for loop to add the given string as many times as the given second argument(num) to the newString variable
   if(num > 0) {
     for(var i = 0; i < num; i++){
       newString += str;
     }
     return newString;
   }
+  // if the second argument is not a positive number return an empty string
   return emptyString;
 }
 
 repeatStringNumTimes("abc", -2);
 
-// ### num 9
+// ### num 9 truncated string
 
+// created a var to store the truncated string
 function truncateString(str, num) {
   var truncated = "";
+// if the given string.length (as first argument) is longer than the second argument (num) and bigger than 3 than the given string will be truncated starting from the first index till the given number minus three indexes which will be replaced by three dots.
+
   if(str.length > num && num > 3) {
     truncated = str.slice(0, num-3) + "...";
     return truncated;
+  // if the given string.length (as first argument) is longer than the second argument (num) but is less or equal than three, the string will be truncated from the first index till the given number and three dots will added.
   } else if(str.length > num && num <= 3) {
     truncated = str.slice(0, num) + "...";
     return truncated;
   }
+  //  if the second argument is equal or bigger than the string length than we return the given string in its entirity.
   return str;
 }
 
@@ -131,8 +140,11 @@ truncateString("Absolutely Longer", 2);
 // ## num 10
 
 function monkey(arr, num) {
+  // created two var. One to store the new array created by the for loop and one to tsore the final result requested by the problem
   var tempArray = [];
   var finalArray = [];
+
+// the for loop will iterate through the given array. Once the loop iterate through elements enough times to equal the size of the array requested by the second argument (in this case num), this new array will be push first into the temp array and then into the result array.
 
   for(var i = 0; i < arr.length; i++) {
     if(i % num != num -1) {
@@ -143,6 +155,8 @@ function monkey(arr, num) {
       tempArray = [];
     }
   }
+// Once the loop is finished all of those newly created segments that are not equal to the size required by the second argument will be pushed into the result array which will be returned by the function.
+
   if(tempArray.length !== 0)
     finalArray.push(tempArray);
     return finalArray;
