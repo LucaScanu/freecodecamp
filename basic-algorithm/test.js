@@ -161,3 +161,60 @@ function monkey(arr, num) {
     finalArray.push(tempArray);
     return finalArray;
 }
+
+// ## num 11 slasher flick
+
+function slasher(arr, howMany) {
+  // The splice() method changes the contents of an array by removing existing elements and/or adding new elements. In this case the argumet doesn't specify items to add but only the array index where to start removing elements.
+  // The splice() methods returns the elements that have been removed(in this case [3]).
+  var newArray = arr.splice(howMany);
+  return newArray;
+}
+
+slasher([1, 2, 3], 2);
+
+// ## num 12 mutations
+
+
+function mutation(arr) {
+  var newArray = arr[0].toLowerCase();
+  var newArray1 = arr[1].toLowerCase();
+  for(i = 0; i < newArray1.length; i++) {
+    if(newArray.indexOf(newArray1[i]) < 0) {
+      return false;
+    }
+
+  }
+  return true;
+}
+
+mutation(["hello", "hey"]);
+
+// ## num 12 falsy bouncer
+
+function bouncer(arr) {
+      return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+
+// ## num 12 falsy bouncer
+
+function destroyer(arr) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  for (i=0; i<arr.length; i++){
+      for (j=1; j<arguments.length; j++){
+        if (arguments[j] === arr[i]){
+          delete arr[i];
+
+        }
+      }
+    }
+
+  return arr.filter(Boolean);
+
+
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
