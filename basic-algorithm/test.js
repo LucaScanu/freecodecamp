@@ -218,3 +218,38 @@ function destroyer(arr) {
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+// ## num 13 caesar cypher
+
+
+function rot13(str) {
+  return str.split('').map.call(str, function(char) {
+   x = char.charCodeAt(0);
+    if(x < 65 || x > 90) {
+    return String.fromCharCode(x);
+} else if(x < 78) {
+  return String.fromCharCode(x + 13);
+} else {
+  return String.fromCharCode(x - 13);
+}
+
+  }).join('');
+}
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
+
+
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+  var newArray = arr.sort(function(a, b) {
+    return a-b;
+  });
+  for(i = 0; i < newArray.length; i++) {
+      if(newArray[i] >= num) {
+        return parseInt(i);
+      }
+    }
+  return newArray.length;
+}
+
+getIndexToIns([10, 20, 30, 40, 50], 35);
