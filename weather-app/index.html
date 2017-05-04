@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Weather App</title>
     <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -16,10 +17,14 @@
   <body>
     <div class="container">
       <h1>Local Weather</h1>
-      <div class="location"></div>
-      <div class="weather"></div>
-      <div class="temp"></div>
-      <div class="icon"></div>
+      <div class="data" id="location"></div>
+      <div class="data" id="icon"></div>
+      <div class="data">
+        <p>The weather forecast for today is:<span id="weather"></span></p>
+      </div>
+      <div class="data">
+        <p>The maximum temperature for today will be:<span id="temp"></span></p>
+      </div>
     </div>
   </body>
 </html>

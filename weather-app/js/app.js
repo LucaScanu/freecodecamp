@@ -9,7 +9,7 @@ $(document).ready(function getWeather() {
   function success(pos) {
     var crd = pos.coords;
 
-    var url =  `http://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&APPID=e0fcd681870e443882820e6c8c241434&units=metrics`;
+    var url =  `http://api.openweathermap.org/data/2.5/weather?lat=${crd.latitude}&lon=${crd.longitude}&APPID=e0fcd681870e443882820e6c8c241434&units=metric`;
     sendRequest(url);
   }
 
@@ -19,9 +19,12 @@ $(document).ready(function getWeather() {
       if(xhr.readyState == 4 && xhr.status == 200) {
         var data = JSON.parse(xhr.responseText);
         var weather = {};
+        var icon =
 
-        $('.location').html(data.weather[0].description);
-
+        $('#location').html(data.name);
+        $('#icon').prepend($('<img>',{src:"http://openweathermap.org/img/w/" + data.weather[0].icon + ".png"}))
+        $('#weather').html(' ' + data.weather[0].main);
+        $('#temp').html(' ' + data.main.temp_max + '&#8451.');
       }
     };
     xhr.open('GET', url, true);

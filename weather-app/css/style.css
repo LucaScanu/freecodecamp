@@ -1,3 +1,13 @@
 body {
   text-align: center;
+  font-family: 'Merriweather', serif;
+  background-color: #3EA1E8;
+  color: #fff;
+}
+
+img {
+  width: 80px;
+}
+.data {
+  margin-bottom: 30px;
 }
