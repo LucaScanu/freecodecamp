@@ -12,7 +12,7 @@ $(document).ready(function() {
         console.log(data);
         $('.content').html('');
         for(var i=0; i<data[1].length; i++){
-        $('.content').prepend("<li><a href=" +data[3][i]+ ">" + data[1][i] + "</a></li>");
+        $('.content').append("<li><a href=" +data[3][i]+ " target=blank>" + data[1][i] + "</a><p>" +data[2][i]+"</p></li>");
         }
       },
       error: function() {
