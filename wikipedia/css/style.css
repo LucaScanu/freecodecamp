@@ -1,0 +1,33 @@
+body {
+  font-family: 'Goudy Bookletter 1911', serif;
+
+}
+
+img {
+  width: 100px;
+}
+
+h1 {
+  font-size: 60px;
+  margin-left: -105px;
+}
+
+/*.input {
+  margin-top: 100px;
+  margin-left: 100px;
+}*/
+
+.image {
+  text-align: right;
+  margin-top: 100px;
+  width: 450px;
+  height: 160px;
+  float: left;
+}
+
+.header {
+  margin-top: 100px;
+  width: 570px;
+  height: 160px;
+  float: right;
+}

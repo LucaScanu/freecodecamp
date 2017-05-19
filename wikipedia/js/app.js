@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   function ajax() {
     var keyword = $("#keyword").val();
-    // console.log(keyword);
+
     $.ajax({
       url: "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + keyword + "&format=json&callback=?",
       dataType: "jsonp",
@@ -21,6 +21,3 @@ $(document).ready(function() {
     });
   }
 });
-
-
-// "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=" + keyword + ""
