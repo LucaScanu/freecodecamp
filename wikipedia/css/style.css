@@ -1,6 +1,7 @@
 body {
   font-family: 'Goudy Bookletter 1911', serif;
-
+  background-color: #1D7874;
+  color: #fff;
 }
 
 img {
@@ -9,25 +10,40 @@ img {
 
 h1 {
   font-size: 60px;
-  margin-left: -105px;
+  margin-left: -185px;
 }
 
-/*.input {
-  margin-top: 100px;
-  margin-left: 100px;
-}*/
+a {
+  padding: 10px;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.input {
+  text-align: -webkit-center;
+}
 
 .image {
   text-align: right;
+  display: inline;
   margin-top: 100px;
+  padding-right: 75px;
   width: 450px;
   height: 160px;
   float: left;
 }
 
 .header {
+  display: inline;
   margin-top: 100px;
   width: 570px;
   height: 160px;
   float: right;
+}
+
+.btn.btn-success {
+  font-size: 20px;
 }
