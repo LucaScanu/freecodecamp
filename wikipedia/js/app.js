@@ -12,8 +12,9 @@ $(document).ready(function() {
         console.log(data);
         $('.content').html('');
         for(var i=0; i<data[1].length; i++){
-        $('.content').append("<li><a href=" +data[3][i]+ " target=blank>" + data[1][i] + "</a><p>" +data[2][i]+"</p></li>");
+        $('.content').append("<li><a href=" +data[3][i]+ " target=blank class=title>" + data[1][i] + "</a><p class=description>" +data[2][i]+"</p></li>");
         }
+        $('#keyword').val('');
       },
       error: function() {
         alert("Error retrieving search results, please refresh the page");

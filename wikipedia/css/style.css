@@ -18,6 +18,12 @@ a {
   color: #fff;
 }
 
+ul {
+  font-size: 17px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
 li {
   list-style: none;
 }
@@ -46,4 +52,13 @@ li {
 
 .btn.btn-success {
   font-size: 20px;
+}
+
+.title {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.description {
+  padding: 10px;
 }
