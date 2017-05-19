@@ -20,5 +20,11 @@ $(document).ready(function() {
         alert("Error retrieving search results, please refresh the page");
       }
     });
+
   }
+  $('#keyword').keypress(function(e) {
+    if(e.which === 13) {
+      $('#button').click();
+    }
+  });
 });
