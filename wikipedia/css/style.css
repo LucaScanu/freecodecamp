@@ -15,7 +15,7 @@ h1 {
 
 a {
   padding: 10px;
-  color: #fff;
+  color: #1D7874;
 }
 
 ul {
@@ -26,6 +26,9 @@ ul {
 
 li {
   list-style: none;
+  background-color: #fff;
+  color: #1D7874;
+  margin: 5px;
 }
 
 .input {
