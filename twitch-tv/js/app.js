@@ -1,15 +1,11 @@
 $(document).ready(function() {
 
-  function ajax() {
-    $.ajax({
-      url: "https://wind-bow.gomix.me/twitch-api/clips/top?limit=10&game=Overwatch&trending=true",
-      action: "GET",
-      success: function(data) {
-        console.log(data);
-      },
-      error: function() {
-        alert("Error retrieving search results, please refresh the page");
-      }
-    });
-  }
+  var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]
+
+  for (var i=0; i<channels.length; i++) {
+  $.getJSON('https://wind-bow.glitch.me/twitch-api/channels/' +channels[i], function(data) {
+    console.log(data);
+  });
+}
+
 });
