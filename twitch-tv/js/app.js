@@ -1,6 +1,6 @@
 $(document).ready(function ajax() {
 
-  var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"]
+  var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "habathcx", "RobotCaleb", "noobs2ninjas"]
 
   channels.forEach(function(channel) {
   $.getJSON('https://wind-bow.glitch.me/twitch-api/channels/' +channel, function(data) {
